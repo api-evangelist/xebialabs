@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://dist.xebialabs.com/public/xl-cli/ (live binary distribution, probed
+  2026-07-21) + https://github.com/xebialabs/blueprint-cli (Go source)
+name: xl CLI (xl-client)
+description: >-
+  The XebiaLabs DevOps-as-Code command-line interface for XL Deploy and XL
+  Release (now Digital.ai Deploy / Digital.ai Release). Still actively
+  released: the XebiaLabs-branded distribution site serves versioned binaries
+  from 8.5.0 through the current 26.1.4 release train for macOS, Linux, and
+  Windows (amd64 + arm64), each with md5/sha1/sha256/sha512 checksums. The
+  blueprint subsystem is open source in Go at github.com/xebialabs/blueprint-cli.
+binary: xl
+latest_version: 26.1.4-708.856
+install:
+  - method: download
+    url: https://dist.xebialabs.com/public/xl-cli/
+    platforms: [darwin-amd64, darwin-arm64, linux-amd64, linux-arm64, windows-amd64]
+  - method: docker
+    command: docker pull xebialabs/xl-client
+    url: https://hub.docker.com/r/xebialabs/xl-client
+  - method: source
+    url: https://github.com/xebialabs/blueprint-cli
+    command: ./gradlew clean build
+commands:
+  - group: devops-as-code
+    summary: Apply YAML definitions of deployments, releases, blueprints, and configuration to Deploy/Release servers (the "xl apply" DevOps-as-Code flow demonstrated in github.com/xebialabs/devops-as-code-workshop)
+  - group: blueprint
+    summary: Scaffold DevOps-as-Code YAML from published blueprints (open-source subsystem, github.com/xebialabs/blueprint-cli; blueprint catalog at github.com/xebialabs/blueprints)
+docs: https://docs.xebialabs.com/
+docs_note: docs.xebialabs.com now redirects to https://docs.digital.ai/

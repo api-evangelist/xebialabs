@@ -1,0 +1,19 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of www.xebialabs.com, 2026-07-21
+note: >-
+  Probed the standard /.well-known/ discovery surface on the XebiaLabs host.
+  Every path returns a 301 redirect to https://digital.ai (the successor
+  company after the February 2020 XebiaLabs + CollabNet VersionOne merger) —
+  no well-known documents are served under the XebiaLabs brand. Recorded here
+  as honest negative results; no WellKnown or SecurityTxt pointer is emitted
+  because nothing was found.
+hosts:
+- host: https://www.xebialabs.com
+  documents:
+  - {path: /.well-known/security.txt, status: 301, redirect: 'https://digital.ai'}
+  - {path: /.well-known/openid-configuration, status: 301, redirect: 'https://digital.ai'}
+  - {path: /.well-known/oauth-authorization-server, status: 301, redirect: 'https://digital.ai'}
+  - {path: /.well-known/api-catalog, status: 301, redirect: 'https://digital.ai'}
+  - {path: /.well-known/ai-plugin.json, status: 301, redirect: 'https://digital.ai'}
+  - {path: /llms.txt, status: 301, redirect: 'https://digital.ai'}

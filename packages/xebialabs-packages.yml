@@ -1,0 +1,86 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  Maven Central search (g:com.xebialabs*), PyPI (xldeploy-py), Docker Hub
+  (hub.docker.com/u/xebialabs), pkg.go.dev, github.com/xebialabs — all probed
+  live 2026-07-21.
+note: >-
+  XebiaLabs merged with CollabNet VersionOne in February 2020 to form
+  Digital.ai; these XebiaLabs-branded packages remain published and, in the
+  case of the Docker images and the xl CLI (see cli/), are still actively
+  released under the Digital.ai product line (latest xl-client 26.1.4 on
+  dist.xebialabs.com).
+packages:
+  - language: python
+    registry: pypi
+    name: xldeploy-py
+    url: https://pypi.org/project/xldeploy-py/
+    install: pip install xldeploy-py
+    official: true
+    description: Python client SDK for the XL Deploy (Digital.ai Deploy) REST API
+    source_code: https://github.com/xebialabs/xldeploy-py
+    latest_version: 0.0.22
+  - language: java
+    registry: maven
+    name: com.xebialabs.overthere:overthere
+    url: https://central.sonatype.com/artifact/com.xebialabs.overthere/overthere
+    install: 'implementation "com.xebialabs.overthere:overthere:5.7.0"'
+    official: true
+    description: Remote host execution/file-manipulation library (SSH, WinRM, CIFS) underpinning XL Deploy
+    source_code: https://github.com/xebialabs/overthere
+    latest_version: 5.7.0
+  - language: java
+    registry: maven
+    name: com.xebialabs.cloud:overcast
+    url: https://central.sonatype.com/artifact/com.xebialabs.cloud/overcast
+    install: 'testImplementation "com.xebialabs.cloud:overcast:10.4.0-1027.808"'
+    official: true
+    description: Java helpers for writing tests against cloud hosts
+    source_code: https://github.com/xebialabs/overcast
+    latest_version: 10.4.0-1027.808
+  - language: java
+    registry: maven
+    name: com.xebialabs.restito:restito
+    url: https://central.sonatype.com/artifact/com.xebialabs.restito/restito
+    install: 'testImplementation "com.xebialabs.restito:restito:1.1.2"'
+    official: true
+    description: Framework for mocking/testing REST services
+    latest_version: 1.1.2
+  - language: kotlin
+    registry: maven
+    name: com.xebialabs.gradle.plugins:integration-server-gradle-plugin
+    url: https://central.sonatype.com/artifact/com.xebialabs.gradle.plugins/integration-server-gradle-plugin
+    install: 'id("com.xebialabs.gradle.plugins.integration-server-gradle-plugin")'
+    official: true
+    description: Gradle plugin for running a Deploy/Release integration server (still released on a Digital.ai version train)
+    source_code: https://github.com/xebialabs/integration-server-gradle-plugin
+    latest_version: 23.3.0-1025.941
+  - language: go
+    registry: go
+    name: github.com/xebialabs/blueprint-cli
+    url: https://pkg.go.dev/github.com/xebialabs/blueprint-cli
+    install: go get github.com/xebialabs/blueprint-cli
+    official: true
+    description: Go source of the xl blueprint CLI (DevOps-as-Code)
+    source_code: https://github.com/xebialabs/blueprint-cli
+  - language: docker
+    registry: dockerhub
+    name: xebialabs/xl-deploy
+    url: https://hub.docker.com/r/xebialabs/xl-deploy
+    install: docker pull xebialabs/xl-deploy
+    official: true
+    description: Docker images for Digital.ai Deploy (1.1M+ pulls)
+  - language: docker
+    registry: dockerhub
+    name: xebialabs/xl-release
+    url: https://hub.docker.com/r/xebialabs/xl-release
+    install: docker pull xebialabs/xl-release
+    official: true
+    description: Docker images for Digital.ai Release Orchestration (590K+ pulls)
+  - language: docker
+    registry: dockerhub
+    name: xebialabs/xl-client
+    url: https://hub.docker.com/r/xebialabs/xl-client
+    install: docker pull xebialabs/xl-client
+    official: true
+    description: Containerized xl CLI client

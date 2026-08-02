@@ -1,21 +1,51 @@
 aid: xebialabs
 name: XebiaLabs
-description: 'XebiaLabs is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  XebiaLabs was an enterprise DevOps software company behind XL Deploy
+  (deployment automation), XL Release (release orchestration), and XL Impact
+  (DevOps analytics), backed by Accel and Susquehanna Growth Equity. In
+  February 2020 XebiaLabs merged with CollabNet VersionOne to form Digital.ai;
+  xebialabs.com now redirects to digital.ai and the products continue as
+  Digital.ai Deploy and Digital.ai Release. The XebiaLabs GitHub organizations,
+  Maven/PyPI/Docker Hub packages, and the dist.xebialabs.com distribution site
+  remain live, still shipping the xl CLI on the current Digital.ai version
+  train. No public hosted API is served under the XebiaLabs brand — the
+  product REST APIs are customer-hosted and documented at docs.digital.ai.
 url: https://raw.githubusercontent.com/api-evangelist/xebialabs/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/506535?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: merged
+x-successor:
+  name: Digital.ai
+  url: https://digital.ai/
+  date: '2020-02'
+  note: Merger of XebiaLabs and CollabNet VersionOne formed Digital.ai
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Developer Tools
+- DevOps
+- Continuous Delivery
+- Deployment Automation
+- Release Orchestration
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +54,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://www.xebialabs.com
+  url: https://www.xebialabs.com
+- type: GitHubOrganization
+  url: https://github.com/xebialabs
+- type: Documentation
+  url: https://docs.xebialabs.com/
+- type: Support
+  url: https://support.digital.ai
+- type: PrivacyPolicy
+  url: https://xebialabs.com/privacy-policy/
+- type: Packages
+  url: packages/xebialabs-packages.yml
+- type: SDKs
+  url: packages/xebialabs-packages.yml
+- type: CLI
+  url: cli/xebialabs-cli.yml
+- type: LLMsTxt
+  url: llms/xebialabs-llms.txt
+- type: DomainSecurity
+  url: security/xebialabs-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
