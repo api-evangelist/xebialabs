@@ -1,0 +1,127 @@
+edges:
+- partner_name: Go module proxy
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official SDK (Go)
+  evidence: https://pkg.go.dev/github.com/xebialabs/blueprint-cli
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Go module proxy (public registry JSON)
+    spec_file: null
+    language: Go
+    packages:
+    - name: github.com/xebialabs/blueprint-cli
+      version: v1.0.4
+      released: '2020-02-19'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/xebialabs/blueprint-cli
+      repo_leg: github-org:xebialabs
+      publisher_leg: org:xebialabs
+      matched_by: github-org
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: Maven Central
+  partner: maven-central
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Java/JVM)
+  evidence: https://central.sonatype.com/artifact/com.xebialabs.cloud/overcast
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Maven Central (public registry JSON)
+    spec_file: null
+    language: Java/JVM
+    packages:
+    - name: com.xebialabs.cloud:overcast
+      version: 10.4.0-1027.808
+      released: '2021-10-27'
+      released_field: lastUpdated
+      lapsed: true
+      page: https://central.sonatype.com/artifact/com.xebialabs.cloud/overcast
+      repo_leg: github-org:xebialabs
+      publisher_leg: groupId:xebialabs.com
+      matched_by: domain
+    - name: com.xebialabs.gradle.plugins:integration-server-gradle-plugin
+      version: 23.3.0-1025.941
+      released: '2023-10-25'
+      released_field: lastUpdated
+      lapsed: true
+      page: https://central.sonatype.com/artifact/com.xebialabs.gradle.plugins/integration-server-gradle-plugin
+      repo_leg: github-org:xebialabs
+      publisher_leg: groupId:xebialabs.com
+      matched_by: domain
+    - name: com.xebialabs.overthere:overthere
+      version: 6.0.2
+      released: '2026-06-22'
+      released_field: lastUpdated
+      lapsed: false
+      page: https://central.sonatype.com/artifact/com.xebialabs.overthere/overthere
+      repo_leg: github-org:xebialabs
+      publisher_leg: groupId:xebialabs.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/xldeploy-py/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: xldeploy-py
+      version: 0.0.22
+      released: '2026-07-15'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/xldeploy-py/
+      repo_leg: github-org:xebialabs
+      publisher_leg: email:xebialabs.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+generated: '2026-10-18'
+method: searched
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
+checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
