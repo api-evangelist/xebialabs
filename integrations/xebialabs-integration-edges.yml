@@ -143,6 +143,25 @@ edges:
     detected: '2026-10-22'
   detected_by: sweep-red-hat-certified-ecosystem.py
   first_seen: '2026-10-22'
+- partner_name: Jenkins (own)
+  partner: jenkins
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://plugins.jenkins.io/deployit-plugin/
+  mirror_of: jenkins/integrations/jenkins-integration-edges.yml
+  apps:
+  - XebiaLabs XL Deploy
+  - XebiaLabs XL Deploy (deployit-plugin)
+  - XebiaLabs XL Release (xlrelease-plugin)
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Jenkins plugin
 generated: '2026-10-18'
 method: searched
 source:
@@ -165,3 +184,4 @@ checked:
 - https://catalog.redhat.com/api/containers/v1/repositories?page_size=100
 - https://catalog.redhat.com/api/containers/v1/vendors/label/
 - https://catalog.redhat.com/software/partners
+- jenkins/integrations/jenkins-integration-edges.yml
